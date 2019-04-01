@@ -29,10 +29,10 @@ extern String right(String a, int len);
 extern String leftRight(String a, String b, int len);
 extern String replaceUtf8(String str, String r);
 
-const char D_INTRO_0[] PROGMEM = "";
-const char D_INTRO_1[] PROGMEM = "ESP8266 Deauther";
-const char D_INTRO_2[] PROGMEM = "by @Spacehuhn";
-const char D_INTRO_3[] PROGMEM = "";
+const char D_INTRO_0[] PROGMEM = "ESP8266";
+const char D_INTRO_1[] PROGMEM = " Deauther";
+const char D_INTRO_2[] PROGMEM = "by";
+const char D_INTRO_3[] PROGMEM = "@Spacehuhn";
 
 // fallback for the buttons
 #ifndef BUTTON_UP
@@ -79,14 +79,14 @@ class DisplayUI {
         // ===== adjustable ===== //
         DEAUTHER_DISPLAY // see config.h
 
-        const uint8_t maxLen           = 18;
+        const uint8_t maxLen           = 12;
         const uint8_t lineHeight       = 12;
         const uint8_t buttonDelay      = 250;
         const uint8_t drawInterval     = 100; // 100ms = 10 FPS
         const uint16_t scrollSpeed     = 500; // time interval in ms
         const uint16_t screenIntroTime = 2500;
-        const uint16_t screenWidth = 128;
-        const uint16_t sreenHeight = 64;
+        const uint16_t screenWidth = 64;
+        const uint16_t sreenHeight = 48;
 
         void configInit();
         void configOn();
